@@ -9,4 +9,5 @@ args = parser.parse_args(); started = time.perf_counter(); result = run_query(ar
 print(result["final_output"]["answer"])
 print("\nStructured JSON:\n" + json.dumps(result["final_output"], indent=2))
 print("\nTrace:\n" + "\n".join(result["logs"]))
+print("\nModel info:\n" + json.dumps(result.get("model_info", {}), indent=2))
 print(f"Question latency: {time.perf_counter() - started:.2f}s")

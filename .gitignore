@@ -2,8 +2,34 @@
 .pytest_cache/
 __pycache__/
 *.pyc
+
+# Environment and secret material
 .env
-docs/AGENT_CONTEXT.md
-docs/codex_instructions.md
-docs/GLOSSARY.md
+.env.*
+*.env
+*.key
+*.pem
+*.token
+*.secret
+*.credentials
+secrets/
+
+# Local model and cache directories
+.cache/
+.huggingface/
+huggingface/
+hf_cache/
+transformers_cache/
+sentence_transformers/
+models_cache/
+
+# Temporary files and scratch output
+tmp/
+temp/
+*.tmp
+*.temp
+*.log
+
 docs/project_audit.md
+docs/codex_instructions.md
+docs/engineering_spec.md
