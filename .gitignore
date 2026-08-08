@@ -31,3 +31,5 @@ temp/
 *.log
 
 docs/project_audit.md
+docs/codex_instructions.md
+docs/engineering_spec.md
