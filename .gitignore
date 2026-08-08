@@ -3,3 +3,7 @@
 __pycache__/
 *.pyc
 .env
+docs/AGENT_CONTEXT.md
+docs/codex_instructions.md
+docs/GLOSSARY.md
+docs/project_audit.md
