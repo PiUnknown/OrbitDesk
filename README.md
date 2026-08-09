@@ -2,6 +2,10 @@
 
 OrbitDesk is a local-first support-agent workflow for the fictional OrbitDesk product. It answers support questions using retrieval-augmented generation (RAG) over the supplied OrbitDesk knowledge base and resolved support cases. It is an orchestration and reliability project—not a general-purpose chatbot.
 
+## Prominent AI-assisted development disclosure
+
+This project was built with substantial assistance from OpenAI Codex. Codex generated the project boilerplate, repository scaffolding, and much of the initial implementation code, and assisted with debugging, testing, documentation, and source-of-truth auditing. The submitted architecture and behavior were reviewed and exercised by the author, who understands the graph, state, retrieval, generation, verification, safety, and revision workflows and can explain or modify them during an interview.
+
 The system receives a question, classifies it, retrieves evidence when appropriate, generates an evidence-constrained answer with a locally cached Hugging Face model, verifies that answer, revises it at most once if verification fails, and returns both human-readable and structured output.
 
 ## What the assignment requires
@@ -214,7 +218,3 @@ The final source objects intentionally contain only `source_id` and `passage`, b
 ## Known limitations
 
 The small local model can produce terse or slightly awkward wording. CPU/disk offloading can make live responses slow; this is a documented hardware trade-off. Deterministic verification and source preservation are prioritized over language quality. The optional cross-encoder reranker and persistent FAISS index are not required for the current submission.
-
-## AI-assisted development disclosure
-
-AI coding assistance was used to implement and audit this project. The graph, state transitions, source-priority rules, safety controls, and tests are explicit in the repository so a reviewer can inspect the engineering decisions.
