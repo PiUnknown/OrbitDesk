@@ -16,13 +16,14 @@ The default live generator is the 0.5B model because the 3B model was disk-offlo
 - Timezone/export multi-document question: approximately 64.30 seconds.
 - Both runs showed `model_mode=transformers`, citation pass, grounding pass, schema pass, and no final retry.
 
-## Hardware record to complete
+## Hardware record
 
-Run `Get-ComputerInfo` or record these manually on the demonstration machine:
+Captured from Windows Task Manager on the demonstration machine:
 
-- CPU: ____________________
-- RAM: ____________________
-- GPU/accelerator: ____________________ (or CPU only)
-- OS: Windows / PowerShell
+- CPU: Intel(R) Core(TM) i5-10300H CPU @ 2.50GHz (4 cores, 8 logical processors)
+- RAM: 16.0 GB DDR4 (15.8 GB usable)
+- GPU/accelerator: NVIDIA GeForce GTX 1650, 4.0 GB dedicated GPU memory; Intel(R) UHD Graphics also present
+- Storage: Micron 2210 NVMe SSD, 477 GB
+- OS/interface: Windows with PowerShell
 
-The CLI now prints `Model info` containing embedding/generation model names, revisions, load timings, and generation mode. Copy that block into the final submission notes.
+The CLI now prints `Model info` containing embedding/generation model names, revisions, load timings, and generation mode. Copy that block into the final submission notes. The GTX 1650 was idle during the observed run; generation was effectively CPU/disk-offloaded, which explains the high latency.
